@@ -1,0 +1,206 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:sans-serif;
+}
+#penduBoard {
+    width: 100%;
+    height: 95vh;
+
+    position: relative;
+}
+/****************************** penduPart ******************************/
+#penduPart {
+    height: 45vh;
+}
+
+.blocWord { /*div*/
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wordPendu { /*p*/
+    font-size: 5em;
+    letter-spacing: 8px;
+}
+
+/********** penduVisuals **********/
+#penduVisuals{
+    position: relative;
+}
+
+#penduTete{
+    position: absolute;
+    top: 100px;
+    right: 252px;
+    width: 50px;
+    height: 50px;
+    border: 5px solid black;
+    border-radius:50%;
+    /* display: none; */
+}
+#penduCorps{
+    position: absolute;
+    height: 5px;
+    width: 70px;
+    border-bottom:5px solid black ;
+    top: 182px;
+    right: 242px;
+    transform: rotate(90deg);
+    /* display: none; */
+
+}
+#penduBrasD{
+    position: absolute;
+    height: 5px;
+    width: 50px;
+    border-bottom:5px solid black ;
+    top: 179px;
+    right: 236px;
+    transform: rotate(52deg);
+    /* display: none; */
+
+}
+#penduBrasG{
+    position: absolute;
+    height: 5px;
+    width: 50px;
+    border-bottom:5px solid black ;
+    top: 179px;
+    right: 268px;
+    transform: rotate(308deg);
+    /* display: none; */
+}
+#penduJambeD{
+    position: absolute;
+    height: 5px;
+    width: 50px;
+    border-bottom:5px solid black ;
+    top: 234px;
+    right: 236px;
+    transform: rotate(52deg);
+    /* display: none; */
+}
+
+#penduJambeG{
+    position: absolute;
+    height: 5px;
+    width: 50px;
+    border-bottom:5px solid black ;
+    top: 234px;
+    right: 268px;
+    transform: rotate(308deg);
+    /* display: none; */
+}
+
+.penduMort{
+    background-color: brown;   
+}
+
+.penduOff{
+    display: none;
+}
+
+/****************************** lettersPart ******************************/
+#lettersPart {
+    height: 45vh;
+    padding: 0 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-end;
+}
+
+.blocLettre {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    background-color: brown;
+
+    cursor: pointer;
+}
+
+.blocLettre:hover {
+    background-color: rgb(201, 55, 55);
+}
+
+.blocLettre:active {
+    background-color: rgb(102, 25, 25);
+}
+
+.lettreText{
+    font-size:2em ;
+    color: white;
+    transition: 0.3s;
+}
+
+.unclickable {
+    background-color: rgb(27, 27, 27);
+    cursor: not-allowed;
+    transition: 0.3s;
+}
+
+.unclickable:hover {
+    background-color: rgb(27, 27, 27);
+}
+.unclickable:active {
+    background-color: rgb(27, 27, 27);
+}
+
+.unclickable p {
+    color: rgb(141, 141, 141);
+}
+
+/****btn****/
+#btnRestart {
+    width: 230px;
+    height: 80px;
+    font-size: 1.5em;
+    border-radius: 10px;
+    border: 5px solid gray;
+}
+
+.btnTurnOff { 
+    display: none;
+}
+
+/***** themeChoice *****/
+#themeChoice {
+    position: absolute;
+
+    top: 0;
+    left: calc(50% - (750px / 2));
+}
+
+[class*="btnTheme"] {
+    width: 230px;
+    height: 80px;
+    margin: 0 10px;
+    font-size: 1.5em;
+    border-radius: 10px;
+    border: 5px solid gray;
+}
+
+.btnThemePays {
+
+}
+
+.btnThemeArbre {
+
+}
+
+.btnThemePrenom {
+
+}
