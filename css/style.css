@@ -1,3 +1,17 @@
+:root {
+    --bloc-initial: rgb(165, 42, 42);
+    --bloc-hover-initial: rgb(201, 55, 55);
+    --bloc-active-initial: rgb(102, 25, 25);
+
+    --bloc-neutral: rgb(31, 31, 31);
+    --bloc-right: rgb(28, 80, 26);
+    --bloc-wrong: rgb(82, 8, 8);
+
+    --width-themeChoice:1250px;
+    --position-left-themeChoice: calc(50% - (var(--width-themeChoice) / 2)) ;
+}
+
+
 * {
     padding: 0;
     margin: 0;
@@ -33,6 +47,36 @@ body {
 /********** penduVisuals **********/
 #penduVisuals{
     position: relative;
+}
+
+#potence {
+    position: relative;
+}
+
+#hPart {
+    position: absolute;
+    top: 30px;
+    right: 155px;
+    width: 271px;
+    border: 5px solid black;
+}
+
+#vPart {
+    position: absolute;
+    top: 157px;
+    right: 242px;
+    width: 300px;
+    transform: rotate(90deg);
+    border: 5px solid black;
+}
+
+#finalPart {
+    position: absolute;
+    top: 67px;
+    right: 243px;
+    width: 67px;
+    transform: rotate(90deg);
+    border: 1px solid black;
 }
 
 #penduTete{
@@ -127,17 +171,17 @@ body {
     align-items: center;
 
     text-align: center;
-    background-color: brown;
+    background-color: var(--bloc-initial);
 
     cursor: pointer;
 }
 
 .blocLettre:hover {
-    background-color: rgb(201, 55, 55);
+    background-color:var(--bloc-hover-initial);
 }
 
 .blocLettre:active {
-    background-color: rgb(102, 25, 25);
+    background-color: var(--bloc-active-initial);
 }
 
 .lettreText{
@@ -147,16 +191,44 @@ body {
 }
 
 .unclickable {
-    background-color: rgb(27, 27, 27);
+    background-color: var(--bloc-neutral);
     cursor: not-allowed;
     transition: 0.3s;
 }
 
 .unclickable:hover {
-    background-color: rgb(27, 27, 27);
+    background-color: var(--bloc-neutral);
 }
 .unclickable:active {
-    background-color: rgb(27, 27, 27);
+    background-color: var(--bloc-neutral);
+}
+
+.unclickableRight {
+    background-color: var(--bloc-right);
+    cursor: not-allowed;
+    transition: 0.3s;
+}
+
+.unclickableRight:hover {
+    background-color: var(--bloc-right);
+}
+
+.unclickableRight:active {
+    background-color: var(--bloc-right);
+}
+
+.unclickableWrong {
+    background-color: var(--bloc-wrong);
+    cursor: not-allowed;
+    transition: 0.3s;
+}
+
+.unclickableWrong:hover {
+    background-color: var(--bloc-wrong);
+}
+
+.unclickableWrong:active {
+    background-color: var(--bloc-wrong);
 }
 
 .unclickable p {
@@ -170,6 +242,22 @@ body {
     font-size: 1.5em;
     border-radius: 10px;
     border: 5px solid gray;
+
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+}
+
+#btnIndice {
+    width: 230px;
+    height: 80px;
+    font-size: 1.5em;
+    border-radius: 10px;
+    border: 5px solid gray;
+
+    position: absolute;
+    bottom: 15px;
+    right: 30px;
 }
 
 .btnTurnOff { 
@@ -181,7 +269,7 @@ body {
     position: absolute;
 
     top: 0;
-    left: calc(50% - (750px / 2));
+    left: calc(50% - (var(--width-themeChoice) / 2));
 }
 
 [class*="btnTheme"] {
