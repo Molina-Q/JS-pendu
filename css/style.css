@@ -1,7 +1,7 @@
 :root {
-    --bloc-initial: rgb(165, 42, 42);
-    --bloc-hover-initial: rgb(201, 55, 55);
-    --bloc-active-initial: rgb(102, 25, 25);
+    --bloc-initial: rgb(36, 53, 153);
+    --bloc-hover-initial: rgb(67, 64, 236);
+    --bloc-active-initial: rgb(26, 25, 102);
 
     --bloc-neutral: rgb(31, 31, 31);
     --bloc-right: rgb(28, 80, 26);
@@ -11,7 +11,7 @@
     --position-left-themeChoice: calc(50% - (var(--width-themeChoice) / 2)) ;
 }
 
-
+/****************************** general ******************************/
 * {
     padding: 0;
     margin: 0;
@@ -20,13 +20,15 @@
 
 body {
     font-family:sans-serif;
+    background-color: antiquewhite;
 }
+
 #penduBoard {
     width: 100%;
     height: 95vh;
-
     position: relative;
 }
+
 /****************************** penduPart ******************************/
 #penduPart {
     height: 45vh;
@@ -53,7 +55,7 @@ body {
     position: relative;
 }
 
-#hPart {
+#hPart { /*potence : parti horizontal*/
     position: absolute;
     top: 30px;
     right: 155px;
@@ -61,7 +63,7 @@ body {
     border: 5px solid black;
 }
 
-#vPart {
+#vPart { /*potence : parti vertical*/
     position: absolute;
     top: 157px;
     right: 242px;
@@ -70,7 +72,7 @@ body {
     border: 5px solid black;
 }
 
-#finalPart {
+#finalPart { /*potence: corde*/
     position: absolute;
     top: 67px;
     right: 243px;
@@ -87,8 +89,8 @@ body {
     height: 50px;
     border: 5px solid black;
     border-radius:50%;
-    /* display: none; */
 }
+
 #penduCorps{
     position: absolute;
     height: 5px;
@@ -97,9 +99,8 @@ body {
     top: 182px;
     right: 242px;
     transform: rotate(90deg);
-    /* display: none; */
-
 }
+
 #penduBrasD{
     position: absolute;
     height: 5px;
@@ -108,9 +109,8 @@ body {
     top: 179px;
     right: 236px;
     transform: rotate(52deg);
-    /* display: none; */
-
 }
+
 #penduBrasG{
     position: absolute;
     height: 5px;
@@ -119,8 +119,8 @@ body {
     top: 179px;
     right: 268px;
     transform: rotate(308deg);
-    /* display: none; */
 }
+
 #penduJambeD{
     position: absolute;
     height: 5px;
@@ -129,7 +129,6 @@ body {
     top: 234px;
     right: 236px;
     transform: rotate(52deg);
-    /* display: none; */
 }
 
 #penduJambeG{
@@ -140,11 +139,10 @@ body {
     top: 234px;
     right: 268px;
     transform: rotate(308deg);
-    /* display: none; */
 }
 
 .penduMort{
-    background-color: brown;   
+    background-color: rgb(0, 0, 0);   
 }
 
 .penduOff{
@@ -162,8 +160,8 @@ body {
 }
 
 .blocLettre {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     margin: 10px;
 
     display: flex;
@@ -172,20 +170,24 @@ body {
 
     text-align: center;
     background-color: var(--bloc-initial);
+    border-radius: 28%;
 
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .blocLettre:hover {
     background-color:var(--bloc-hover-initial);
+    transition: 0.3s;
 }
 
 .blocLettre:active {
     background-color: var(--bloc-active-initial);
+    transition: 0.3s;
 }
 
 .lettreText{
-    font-size:2em ;
+    font-size:2.5em;
     color: white;
     transition: 0.3s;
 }
@@ -199,6 +201,7 @@ body {
 .unclickable:hover {
     background-color: var(--bloc-neutral);
 }
+
 .unclickable:active {
     background-color: var(--bloc-neutral);
 }
@@ -254,7 +257,6 @@ body {
     font-size: 1.5em;
     border-radius: 10px;
     border: 5px solid gray;
-
     position: absolute;
     bottom: 15px;
     right: 30px;
@@ -267,8 +269,7 @@ body {
 /***** themeChoice *****/
 #themeChoice {
     position: absolute;
-
-    top: 0;
+    top: 15px;
     left: calc(50% - (var(--width-themeChoice) / 2));
 }
 
